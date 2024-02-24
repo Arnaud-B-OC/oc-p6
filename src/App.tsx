@@ -7,14 +7,14 @@ import Logement from './pages/Logement';
 
 function App() {
     return (
-        <div className="App">
+        <>
             <Routes>
                 <Route path='*' element={<ErrorPage404/>} />
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about/" element={<About/>}/>
                 <Route path="/logements/:id" element={<Logement/>}/>
             </Routes>
-        </div>
+        </>
     );
 }
 
