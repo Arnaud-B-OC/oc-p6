@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --color-main: #FF6060
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Montserrat', 'Arial';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+
 }
 
-.App-link {
-  color: #61dafb;
+// Global
+h1 {
+    color: var(--color-main);
+    font-size: 36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+// Header
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 210px;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+
+        a {
+            font-size: 24px;
+            color: black;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a:hover {
+
+        }
+        a.active {
+            text-decoration: underline;
+        }
+    }
 }
+
+// Footer
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 0 30px 0;
+
+    img {
+        width: 120px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(105%) contrast(107%);
+    }
+
+    p {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+// Err
+.errPage {
+    display: flex;
+    padding: 140px 0;
+    gap: 140px;
+    flex-direction: column;
+}
+
+
+.err404 {
+    text-align: center;
+    font-size: 288px;
+    color: var(--color-main);
+}
+h1.err {
+    text-align: center;
+}
+a.err {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    header {
+        img {
+            width: 145px;
+        }
+
+        nav {
+            a {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    footer {
+        padding: 50px 0;
+        gap: 25px;
+
+        p {
+            width: 130px;
+            font-size: 12px;
+            padding: 0 10px;
+            text-align: center;
+        }
+    }
+
+    .errPage {
+        gap: 100px;
+        padding: 100px 40px;
+    }
+    a.err {
+        font-size: 14px;
+    }
+    h1.err {
+        font-size: 18px;
+    }
+    .err404 {
+        font-size: 96px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
