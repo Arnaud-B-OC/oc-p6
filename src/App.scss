@@ -43,8 +43,8 @@ header {
 
         a {
             font-size: 24px;
-            color: var(--color-main);
-            font-weight: bold;
+            color: black;
+            font-weight: 500;
             text-decoration: none;
         }
         a.active {
@@ -129,6 +129,24 @@ a.err {
     }
 }
 
+// About
+.aboutImage {
+    background-image: url('./static/img2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+
+    height: 220px;
+}
+
+section.about {
+    margin: 40px 110px;
+}
+
 // - Logements
 .logements {
     background: #F6F6F6;
@@ -169,7 +187,41 @@ a.err {
     }
 }
 
+// Dropdown
+.dropdown {
+    margin-bottom: 30px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 5px 5px;
 
+
+
+    .bar  {
+        background-color: var(--color-main);
+        padding: 10px 15px;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 24px;
+            font-weight: 700;        
+            color: white;
+        }
+    }
+
+    .content {
+        padding: 20px;
+
+
+        p {
+            font-size: 18px;
+
+        }
+    }
+
+
+}
 
 
 
@@ -234,6 +286,11 @@ a.err {
         }
     }
     
+    // About
+    .aboutImage {
+        height: 110px;
+    }
+
     // Logements
     .logements {
         gap: 20px;
