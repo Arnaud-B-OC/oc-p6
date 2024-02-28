@@ -41,7 +41,7 @@ function Home() {
 
             <section className='logements'>
                 {logements.map((logement) => {
-                    return <Link to={logement.id}>
+                    return <Link to={`/logements/${logement.id}`}>
                         <article key={logement.id}>
                             <img src={logement.cover} alt={logement.title}/>
                             <h2>{logement.title}</h2>
