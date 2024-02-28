@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface LogementData {
     cover: string
@@ -40,10 +41,12 @@ function Home() {
 
             <section className='logements'>
                 {logements.map((logement) => {
-                    return <article key={logement.id}>
-                        <img src={logement.cover} alt={logement.title}/>
-                        <h2>{logement.title}</h2>
-                    </article>
+                    return <Link to={logement.id}>
+                        <article key={logement.id}>
+                            <img src={logement.cover} alt={logement.title}/>
+                            <h2>{logement.title}</h2>
+                        </article>
+                    </Link>
                 })}
             </section>
         </main>

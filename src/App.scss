@@ -158,7 +158,7 @@ section.about {
     flex-wrap: wrap;
     padding-bottom: 30px;
 
-    article {
+    a {
         position: relative;
         aspect-ratio: 1 / 1;
         background-color: var(--color-main);
@@ -168,21 +168,26 @@ section.about {
         width: calc(100% / 3 - 40px);
         // height: 340px;
 
-        img {
+        article {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
 
-        h2 {
-            padding: 20px;
-            bottom: 0;
-            left: 0;
-
-            position: absolute;
-            color: white;
-
-            font-size: 18px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            h2 {
+                padding: 20px;
+                bottom: 0;
+                left: 0;
+    
+                position: absolute;
+                color: white;
+    
+                font-size: 18px;
+            }
         }
     }
 }
@@ -298,17 +303,24 @@ section.about {
         padding: 0;
         padding-bottom: 30px;
 
-        article {
+
+
+        a {
             aspect-ratio: 335 / 255;
             width: calc(100%);
             // height: 340px;
     
-            img {
+            article {
+                width: 100%;
+                height: 100%;
 
-            }
+                img {
+
+                }
+        
+                h2 {
     
-            h2 {
-
+                }    
             }
         }
     }
