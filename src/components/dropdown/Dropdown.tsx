@@ -1,3 +1,4 @@
+import './test.scss';
 
 function Dropdown({title, text} : {title : string, text : string[] | string}) {
     let data = Array.isArray(text) ? text : [text]
@@ -8,7 +9,7 @@ function Dropdown({title, text} : {title : string, text : string[] | string}) {
             <img src='/assets/icons/arrow.svg' alt=''/>
         </div>
         <div className='content'>
-            {data.map((t) => { return <p>{t}</p> })}
+            {data.map((t) => { return <p key={t}>{t}</p> })}
         </div>
     </div>
 }

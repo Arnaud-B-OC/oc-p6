@@ -1,4 +1,4 @@
-import Dropdown from "../components/Dropdown"
+import Dropdown from "../components/dropdown/Dropdown"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Tag from "../components/Tag"

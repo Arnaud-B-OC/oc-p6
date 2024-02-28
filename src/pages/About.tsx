@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Dropdown from '../components/Dropdown';
+import Dropdown from '../components/dropdown/Dropdown';
 
 function About() {
     return <>
