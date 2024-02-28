@@ -14,7 +14,9 @@ body {
 }
 
 main {
-
+    // max-width: 1240px;
+    padding: 0 100px;
+    margin: 0 auto;
 }
 
 // Global
@@ -41,12 +43,9 @@ header {
 
         a {
             font-size: 24px;
-            color: black;
-            font-weight: 500;
+            color: var(--color-main);
+            font-weight: bold;
             text-decoration: none;
-        }
-        a:hover {
-
         }
         a.active {
             text-decoration: underline;
@@ -99,6 +98,83 @@ a.err {
     color: black;
 }
 
+// Home Page
+.home {
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+
+    .homeImage {
+        background-image: url('./static/img1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+
+        h1 {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            font-size: 48px;
+            color: white;
+
+            padding: 75px 0;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+    }
+}
+
+// - Logements
+.logements {
+    background: #F6F6F6;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    gap: 60px;
+    padding: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+
+    article {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        background-color: var(--color-main);
+        border-radius: 25px;
+        overflow: hidden;
+
+        width: calc(100% / 3 - 40px);
+        // height: 340px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2 {
+            padding: 20px;
+            bottom: 0;
+            left: 0;
+
+            position: absolute;
+            color: white;
+
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 767px) {
@@ -127,6 +203,10 @@ a.err {
         }
     }
 
+    main {
+        padding: 0 20px;
+    }
+
     .errPage {
         gap: 100px;
         padding: 100px 40px;
@@ -140,6 +220,57 @@ a.err {
     .err404 {
         font-size: 96px;
     }
+
+    // Home Page
+    .home {
+        gap: 20px;
+
+        .homeImage {
+            h1 {
+                font-size: 24px;
+                padding: 30px 95px 30px 16px;
+                text-align: left;
+            }
+        }
+    }
+    
+    // Logements
+    .logements {
+        gap: 20px;
+        background-color: unset;
+        padding: 0;
+        padding-bottom: 30px;
+
+        article {
+            aspect-ratio: 335 / 255;
+            width: calc(100%);
+            // height: 340px;
+    
+            img {
+
+            }
+    
+            h2 {
+
+            }
+        }
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

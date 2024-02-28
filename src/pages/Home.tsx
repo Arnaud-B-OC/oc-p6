@@ -1,20 +1,55 @@
-import logo from '../logo.svg';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { useEffect, useState } from 'react';
+
+interface LogementData {
+    cover: string
+    description: string
+    equipments: string[]
+    host: {
+        name: string
+        picture: string
+    }
+    id: string
+    location: string
+    pictures: string[]
+    rating: number
+    tags: string[]
+    title: string
+}
 
 function Home() {
-    return <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>
-    Edit <code>src/App.tsx</code> and save to reload.
-    </p>
-    <a
-    className="App-link"
-    href="https://reactjs.org"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-    Learn React
-    </a>
-</header>
+    const [logements, setLogements] = useState<LogementData[]>([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/logements.json').then((data) => data.json()).then((json) => {
+
+            console.log(json)
+
+            setLogements(json)
+        });
+	}, [])
+
+    return <>
+        <Header/>
+
+        <main className='home'>
+            <div className='homeImage'>
+                <h1>Chez vous, partout et ailleurs</h1>
+            </div>
+
+            <section className='logements'>
+                {logements.map((logement) => {
+                    return <article key={logement.id}>
+                        <img src={logement.cover} alt={logement.title}/>
+                        <h2>{logement.title}</h2>
+                    </article>
+                })}
+            </section>
+        </main>
+
+        <Footer/>
+    </>
 }
 
 export default Home
