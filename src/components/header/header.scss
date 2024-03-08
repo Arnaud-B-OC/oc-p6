@@ -1,0 +1,41 @@
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 210px;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+
+        a {
+            font-size: 24px;
+            color: black;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a.active {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        img {
+            width: 145px;
+        }
+
+        nav {
+            a {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

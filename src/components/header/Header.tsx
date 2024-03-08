@@ -1,4 +1,5 @@
-import Navigation from "./NavigationMenu"
+import Navigation from "../NavigationMenu"
+import './header.scss'
 
 function Header() {
     return <header>
