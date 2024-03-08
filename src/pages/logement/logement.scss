@@ -1,0 +1,54 @@
+
+// Logement Specific
+.logement-details {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+.logement-details > div {
+    flex: 1 1 0;
+}
+// hostratingtitle
+// TODO : Changer le nom
+.upperlogementcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+// TODO : Changer le nom
+.hostratingtitle {
+
+}
+
+
+
+// - Host + Rating
+.host-rating {
+
+}
+
+.host {
+    display: flex;
+
+    img {
+        border-radius: 100%;
+        width: 64px;
+        height: 64px;
+    }
+
+    p {
+        color: var(--color-main);
+        font-size: 18px;
+    }
+}
+
+.rating {
+
+}
+
+@media screen and (max-width: 800px) {
+    .logement-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

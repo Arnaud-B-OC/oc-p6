@@ -1,7 +1,8 @@
-import Dropdown from "../components/dropdown/Dropdown"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import Tag from "../components/Tag"
+import Dropdown from "../../components/dropdown/Dropdown"
+import Footer from "../../components/footer/Footer"
+import Header from "../../components/header/Header"
+import Tag from "../../components/tag/Tag"
+import './logement.scss'
 
 function Logement() {
     
@@ -48,21 +49,29 @@ function Logement() {
             </div>
 
             <section className='logement'>
-                <h1>{data.title}</h1>
-                <h2>{data.location}</h2>
-
-                <div>
-                    <div className='tags-list'>
-                        {data.tags.map((tag) => {
-                            return <Tag key={tag} name={tag}/>
-                        })}
+                <div className='upperlogementcontainer'>
+                    <div className='hostratingtitle'>
+                        <h1>{data.title}</h1>
+                        <h2>{data.location}</h2>
+                        
+                        <div className='tags-list'>
+                            {data.tags.map((tag) => {
+                                return <Tag key={tag} name={tag}/>
+                            })}
+                        </div>
                     </div>
-                    <div>
+
+                    <div className='host-rating'>
                         {/* TODO : Host */}
-                        <p>{data.host.name}</p><img src={data.host.picture} alt={data.host.name}/>
+                        <div className='host'>
+                            <p>{data.host.name}</p>
+                            <img src={data.host.picture} alt={data.host.name}/>
+                        </div>
                         
                         {/* TODO : Rating */}
-                        <p>{data.rating} étoiles</p>
+                        <div className='rating'>
+                            <p>{data.rating} étoiles</p>
+                        </div>
                     </div>
                 </div>
 
