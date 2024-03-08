@@ -5,9 +5,9 @@
 }
 
 .tag {
-    width: 115px;
+    min-width: 115px;
     height: 25px;
-    padding: 3px 0;
+    padding: 3px 20px;
 
     background-color: var(--color-main);
     border-radius: 10px;
