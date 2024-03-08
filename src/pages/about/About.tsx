@@ -1,6 +1,7 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Dropdown from '../components/dropdown/Dropdown';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import Dropdown from '../../components/dropdown/Dropdown';
+import './about.scss'
 
 function About() {
     return <>
