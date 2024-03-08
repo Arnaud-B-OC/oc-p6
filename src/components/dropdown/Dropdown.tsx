@@ -1,6 +1,6 @@
 import './dropdown.scss';
 
-function Dropdown({title, text} : {title : string, text : string[] | string}) {
+function Dropdown({title, text} : {title : string, text : string[] | string} = {title: '', text: []}) {
     let data = Array.isArray(text) ? text : [text]
     
     return <div className='dropdown'>
