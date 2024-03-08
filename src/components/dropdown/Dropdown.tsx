@@ -1,4 +1,4 @@
-import './test.scss';
+import './dropdown.scss';
 
 function Dropdown({title, text} : {title : string, text : string[] | string}) {
     let data = Array.isArray(text) ? text : [text]

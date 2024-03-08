@@ -1,0 +1,35 @@
+
+.dropdown {
+    margin-bottom: 30px;
+    background-color: #f6f6f6;
+    border-radius: 10px 10px 5px 5px;
+
+    .bar  {
+        background-color: var(--color-main);
+        padding: 10px 15px;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 24px;
+            font-weight: 700;        
+            color: white;
+        }
+    }
+
+    .content {
+        padding: 20px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dropdown {
+        width: 100%;
+    }
+}
