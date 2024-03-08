@@ -1,0 +1,19 @@
+
+.host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    img {
+        border-radius: 100%;
+        width: 64px;
+        height: 64px;
+    }
+
+    p {
+        color: var(--color-main);
+        font-size: 18px;
+        text-align: right;
+    }
+}
