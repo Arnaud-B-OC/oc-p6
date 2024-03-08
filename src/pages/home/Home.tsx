@@ -1,7 +1,8 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './home.scss'
 
 interface LogementData {
     cover: string
@@ -41,8 +42,8 @@ function Home() {
 
             <section className='logements'>
                 {logements.map((logement) => {
-                    return <Link to={`/logements/${logement.id}`}>
-                        <article key={logement.id}>
+                    return <Link to={`/logements/${logement.id}`} key={logement.id}>
+                        <article>
                             <img src={logement.cover} alt={logement.title}/>
                             <h2>{logement.title}</h2>
                         </article>
