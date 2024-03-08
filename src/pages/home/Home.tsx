@@ -3,22 +3,7 @@ import Footer from '../../components/footer/Footer';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './home.scss'
-
-interface LogementData {
-    cover: string
-    description: string
-    equipments: string[]
-    host: {
-        name: string
-        picture: string
-    }
-    id: string
-    location: string
-    pictures: string[]
-    rating: number
-    tags: string[]
-    title: string
-}
+import { LogementData } from '../../interfaces';
 
 function Home() {
     const [logements, setLogements] = useState<LogementData[]>([])
