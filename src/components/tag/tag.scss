@@ -1,11 +1,12 @@
 
 .tags-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .tag {
-    min-width: 115px;
+    min-width: auto;
     height: 25px;
     padding: 3px 20px;
 
@@ -19,10 +20,14 @@
 }
 
 @media screen and (max-width: 800px) {
+    .tags-list {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
     .tag {
-        width: 84px;
         height: 18px;
-        padding: 2px 0;
+        padding: 3px 20px;
         border-radius: 5px;
 
         font-size: 10px;
