@@ -14,3 +14,8 @@ export interface LogementData {
     tags: string[]
     title: string
 }
+
+export interface AboutData {
+    title: string
+    text: string
+}

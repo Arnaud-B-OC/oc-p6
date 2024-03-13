@@ -1,23 +1,10 @@
 
-.aboutImage {
-    background-image: url('../../static/img2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    width: 100%;
-    border-radius: 25px;
-    overflow: hidden;
-
-    height: 220px;
-}
-
 section.about {
     margin: 40px 110px;
 }
 
 @media screen and (max-width: 800px) {
-    .aboutImage {
-        height: 110px;
+    section.about {
+        margin: 20px 0;
     }
 }
