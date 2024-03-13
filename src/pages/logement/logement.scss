@@ -13,42 +13,40 @@
 .upperlogementcontainer {
     display: flex;
     justify-content: space-between;
-}
-
-// TODO : Changer le nom
-.hostratingtitle {
+    margin-bottom: 20px;
 
 }
-
 
 
 // - Host + Rating
 .host-rating {
-
-}
-
-.host {
     display: flex;
-
-    img {
-        border-radius: 100%;
-        width: 64px;
-        height: 64px;
-    }
-
-    p {
-        color: var(--color-main);
-        font-size: 18px;
-    }
-}
-
-.rating {
-
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 800px) {
     .logement-details {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .upperlogementcontainer {
+        flex-direction: column;
+    }
+    
+    .host-rating {
+        flex-direction: row-reverse;
+    }
+
+    .logement {
+        h1 {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
     }
 }
