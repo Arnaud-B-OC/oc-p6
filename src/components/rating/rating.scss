@@ -2,3 +2,11 @@
 .rating {
     width: fit-content;
 }
+
+@media screen and (max-width: 800px) {
+    .rating {
+        img {
+            height: 18px;
+        }
+    }
+}

@@ -31,5 +31,17 @@
 @media screen and (max-width: 800px) {
     .dropdown {
         width: 100%;
+
+        .bar {
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .content {    
+            p {
+                font-size: 12px;
+            }
+        }
     }
 }
