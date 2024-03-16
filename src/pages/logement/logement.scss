@@ -18,9 +18,10 @@
 // - Host + Rating
 .host-rating {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
     flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 .logement {
@@ -43,6 +44,8 @@
     .host-rating {
         flex-direction: row-reverse;
         align-items: center;
+        justify-content: space-between;
+        gap: 0;
     }
 
     .logement {
