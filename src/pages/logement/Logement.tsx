@@ -37,8 +37,8 @@ function Logement() {
                 <Carrousel images={logement.pictures}/>
                 
                 <section className='logement'>
-                    <div className='upperlogementcontainer'>
-                        <div className='hostratingtitle'>
+                    <div className='logementContainer'>
+                        <div>
                             <h1>{logement.title}</h1>
                             <h2>{logement.location}</h2>
                             
