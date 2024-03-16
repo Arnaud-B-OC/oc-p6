@@ -10,6 +10,11 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
+
+    padding-bottom: 190px + 20px;
+
     font-family: 'Montserrat', 'Arial';
 }
 
