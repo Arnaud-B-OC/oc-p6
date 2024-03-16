@@ -10,11 +10,12 @@ import { useParams } from 'react-router-dom'
 import Carrousel from '../../components/carrousel/Carrousel'
 import './logement.scss'
 import ErrorPage404 from '../error/ErrorPage404'
+import Loading from '../loading/Loading'
 
 function Logement() {
     const params = useParams();
 
-    const [logement, setLogement] = useState<LogementData>();
+    const [logement, setLogement] = useState<LogementData | undefined | null>(null);
 
     useEffect(() => {
         fetch('http://localhost:3000/api/logements.json').then((data) => data.json()).then((json) => {
@@ -24,39 +25,44 @@ function Logement() {
 	}, [params.id]);
 
     return <>
+        {logement === null && <>
+            <Header/>
+            <Loading/>
+            <Footer/>
+        </>}
         {logement && <>
             <Header/>
 
             <main>
-                <Carrousel images={logement?.pictures}/>
+                <Carrousel images={logement.pictures}/>
                 
                 <section className='logement'>
                     <div className='upperlogementcontainer'>
                         <div className='hostratingtitle'>
-                            <h1>{logement?.title}</h1>
-                            <h2>{logement?.location}</h2>
+                            <h1>{logement.title}</h1>
+                            <h2>{logement.location}</h2>
                             
                             <div className='tags-list'>
-                                {logement?.tags.map((tag) => <Tag key={tag} name={tag}/>)}
+                                {logement.tags.map((tag, index) => <Tag key={index} name={tag}/>)}
                             </div>
                         </div>
 
                         <div className='host-rating'>
-                            <Host fullname={logement?.host.name ?? ''} picture={logement?.host.picture ?? ''}/>
-                            <Rating rating={logement?.rating ?? 0}/>
+                            <Host fullname={logement.host.name} picture={logement.host.picture}/>
+                            <Rating rating={logement.rating}/>
                         </div>
                     </div>
 
                     <div className='logement-details'>
-                        <Dropdown title='Description' text={logement?.description ?? ''}/>
-                        <Dropdown title='Équipements' text={logement?.equipments ?? ''}/>
+                        <Dropdown title='Description' text={logement.description}/>
+                        <Dropdown title='Équipements' text={logement.equipments}/>
                     </div>
                 </section>
             </main>
 
             <Footer/>
         </>}
-        {!logement && <ErrorPage404/>}
+        {logement === undefined && <ErrorPage404/>}
     </>
 }
 

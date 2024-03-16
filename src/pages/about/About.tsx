@@ -5,26 +5,26 @@ import './about.scss';
 import { useEffect, useState } from 'react';
 import { AboutData } from '../../interfaces';
 import Banner from '../../components/banner/Banner';
+import Loading from '../loading/Loading';
 
 function About() {
-    const [aboutData, setAboutData] = useState<AboutData[]>([]);
+    const [aboutData, setAboutData] = useState<AboutData[] | undefined>(undefined);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/about.json').then((data) => data.json()).then((json) => {
-            setAboutData(json)
-        });
+        fetch('http://localhost:3000/api/about.json').then((data) => data.json()).then((json) => setAboutData(json));
 	}, []);
 
     return <>
         <Header/>
 
-        <main>
+        {aboutData && <main>
             <Banner image='/assets/images/img2.png'/>
 
             <section className='about'>
                 {aboutData.map((aboutItem, index) => <Dropdown key={index} title={aboutItem.title} text={aboutItem.text}/>)}
             </section>
-        </main>
+        </main>}
+        {!aboutData && <Loading/>}
 
         <Footer/>
     </>
