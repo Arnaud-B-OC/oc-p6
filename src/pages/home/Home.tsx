@@ -6,12 +6,13 @@ import { LogementData } from '../../interfaces';
 import Banner from '../../components/banner/Banner';
 import LogementCard from '../../components/logementCard/LogementCard';
 import Loading from '../loading/Loading';
+import { request } from '../../request';
 
 function Home() {
     const [logements, setLogements] = useState<LogementData[] | undefined>(undefined);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/logements.json').then((data) => data.json()).then((json) => setLogements(json));
+        request('/api/logements.json').then((result) => setLogements(result))
 	}, []);
 
     return <>

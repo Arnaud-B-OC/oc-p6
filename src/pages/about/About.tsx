@@ -6,12 +6,13 @@ import { useEffect, useState } from 'react';
 import { AboutData } from '../../interfaces';
 import Banner from '../../components/banner/Banner';
 import Loading from '../loading/Loading';
+import { request } from '../../request';
 
 function About() {
     const [aboutData, setAboutData] = useState<AboutData[] | undefined>(undefined);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/about.json').then((data) => data.json()).then((json) => setAboutData(json));
+        request('/api/about.json').then((result) => setAboutData(result))
 	}, []);
 
     return <>

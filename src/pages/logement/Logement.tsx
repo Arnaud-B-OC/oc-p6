@@ -11,6 +11,7 @@ import Carrousel from '../../components/carrousel/Carrousel'
 import './logement.scss'
 import ErrorPage404 from '../error/ErrorPage404'
 import Loading from '../loading/Loading'
+import { request } from '../../request'
 
 function Logement() {
     const params = useParams();
@@ -18,10 +19,10 @@ function Logement() {
     const [logement, setLogement] = useState<LogementData | undefined | null>(null);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/logements.json').then((data) => data.json()).then((json) => {
-            let logement : LogementData | undefined = json.find((logement : LogementData) => logement.id === params.id);
+        request('/api/logements.json').then((result) => {
+            let logement : LogementData | undefined = result.find((logement : LogementData) => logement.id === params.id);
             setLogement(logement);
-        });
+        })
 	}, [params.id]);
 
     return <>
