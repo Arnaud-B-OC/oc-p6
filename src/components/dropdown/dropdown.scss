@@ -3,6 +3,7 @@
     margin-bottom: 30px;
     background-color: #f6f6f6;
     border-radius: 10px 10px 5px 5px;
+    height: fit-content;
 
     .bar  {
         background-color: var(--color-main);
@@ -17,14 +18,38 @@
             font-weight: 700;        
             color: white;
         }
+
+        img {
+            height: 24px;
+            transform: rotate(180deg);
+            transition: transform 0.4s linear;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+        }
     }
 
     .content {
-        padding: 20px;
+        overflow: hidden;
+        
+        max-height: 0;
+        transition: max-height 1s ease;
 
         p {
+            white-space: break-spaces;
+            padding: 20px;
             font-size: 18px;
         }
+
+    }
+}
+
+.dropdown.open {
+    .bar img {
+        transform: rotate(0deg);
+        transition: transform 0.4s linear;      
     }
 }
 
@@ -33,8 +58,14 @@
         width: 100%;
 
         .bar {
+            padding: 10px;
+
             p {
                 font-size: 13px;
+            }
+
+            img {
+                height: 13px;
             }
         }
 
