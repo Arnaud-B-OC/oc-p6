@@ -29,6 +29,16 @@
         font-size: 36px;
         font-weight: 500;
     }
+
+    .dropdown {
+        img {
+            height: 18px;
+        }
+    
+        p {
+            font-size: 18px;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -56,6 +66,16 @@
         h2 {
             font-size: 14px;
             padding-top: 5px;
+        }
+
+        .dropdown {
+            img {
+                height: 13px;
+            }
+            
+            p {
+                font-size: 13px;
+            }
         }
     }
 }

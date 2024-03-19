@@ -56,5 +56,9 @@
     .carrousel {
         margin-bottom: 15px;
         height: 255px;
+
+        .indicator {
+            display: none;
+        }
     }
 }
