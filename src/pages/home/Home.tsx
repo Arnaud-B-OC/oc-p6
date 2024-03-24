@@ -12,7 +12,7 @@ function Home() {
     const [logements, setLogements] = useState<LogementData[] | undefined>(undefined);
 
     useEffect(() => {
-        request('/api/logements.json').then((result) => setLogements(result))
+        request('/api/logements.json').then((result : LogementData[]) => setLogements(result))
 	}, []);
 
     return <>

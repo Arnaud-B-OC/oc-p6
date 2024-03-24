@@ -12,7 +12,7 @@ function About() {
     const [aboutData, setAboutData] = useState<AboutData[] | undefined>(undefined);
 
     useEffect(() => {
-        request('/api/about.json').then((result) => setAboutData(result))
+        request('/api/about.json').then((result : AboutData[]) => setAboutData(result))
 	}, []);
 
     return <>

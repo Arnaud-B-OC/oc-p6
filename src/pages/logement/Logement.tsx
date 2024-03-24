@@ -19,8 +19,8 @@ function Logement() {
     const [logement, setLogement] = useState<LogementData | undefined | null>(null);
 
     useEffect(() => {
-        request('/api/logements.json').then((result) => {
-            let logement : LogementData | undefined = result.find((logement : LogementData) => logement.id === params.id);
+        request('/api/logements.json').then((result : LogementData[]) => {
+            let logement = result.find((logement) => logement.id === params.id);
             setLogement(logement);
         })
 	}, [params.id]);
