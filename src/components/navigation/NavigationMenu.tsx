@@ -1,4 +1,5 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation } from 'react-router-dom'
+import './navigation.scss'
 
 function Navigation() {
     const location = useLocation()
