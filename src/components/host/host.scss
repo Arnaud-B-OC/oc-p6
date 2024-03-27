@@ -1,0 +1,34 @@
+
+.host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    
+    img {
+        border-radius: 100%;
+        width: 64px;
+        height: 64px;
+    }
+
+    p {
+        color: var(--color-main);
+        font-size: 18px;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .host {
+        p {
+            font-size: 12px;
+
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    
+}

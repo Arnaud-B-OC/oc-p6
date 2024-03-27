@@ -1,0 +1,14 @@
+
+section.about {
+    margin: 40px 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    section.about {
+        margin: 20px 0;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,37 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+:root {
+    --color-main: #FF6060
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+
+    padding-bottom: 190px + 20px;
+
+    font-family: 'Montserrat', 'Arial';
+}
+
+main {
+    // max-width: 1240px;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+
+// Global
+h1 {
+    color: var(--color-main);
+    font-size: 36px;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        padding: 0 20px;
+    }
+}

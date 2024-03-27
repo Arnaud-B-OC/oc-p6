@@ -1,0 +1,15 @@
+
+.rating {
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+    .rating {
+        img {
+            height: 18px;
+        }
+    }
+}

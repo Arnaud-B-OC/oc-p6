@@ -1,0 +1,36 @@
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag {
+    min-width: auto;
+    height: 25px;
+    padding: 3px 20px;
+
+    background-color: var(--color-main);
+    border-radius: 10px;
+
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+    .tags-list {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .tag {
+        height: 18px;
+        padding: 3px 20px;
+        border-radius: 5px;
+
+        font-size: 10px;
+    }
+}
